@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { JwtModule } from '@nestjs/jwt';
 import { UserModule } from './user/user.module';
+import { TaskModule } from './task/task.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { UserModule } from './user/user.module';
     MongooseModule.forRoot(process.env.MONGO_URI),
     JwtModule.register({}),
     UserModule,
+    TaskModule,
   ],
 
   controllers: [],
